@@ -12,7 +12,7 @@ No use BIG formula in your code, use Math.IO
 
 Не используйте больших формул в вашем коде, используйте Math.IO
 
-№ What can
+# What can
 1. Calculate the discriminant
 2. Finding a party to the Pythagorean theorem
 3. Finding aside by the cosine
