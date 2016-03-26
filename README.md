@@ -20,7 +20,7 @@ No use BIG formula in your code, use Math.IO
 Discr (a, b, c)
 
 Нахождение стороны C по теореме пифагора
-findСAtteorPifag (a, b)
+/*findСAtteorPifag (a, b)/*
 
 Нахождение стороны A по теореме пифагора
 findСAtteorPifag (a, b)
