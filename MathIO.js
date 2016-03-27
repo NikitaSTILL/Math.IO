@@ -1,3 +1,5 @@
+/*МАТЕМАТИКА*/
+
 //Дискриминант
 function Discr (a, b, c) {
 	var D = Math.pow(b,2)-4*a*c;
@@ -116,4 +118,198 @@ function SSectorMax (R, n) {
 	var pi = 3.141592653589793238462643383279;
 	var S = (pi*Math.pow(S, 2)*n)/360;
 	return S;
+}
+
+/*ФИЗИКА*/
+
+function PhysFInWorld (m1, m2, R) {
+	var G = 0.0000000000667;
+	var F = G*((m1*m2)/Math.pow(R, 2));
+	return F;
+}
+
+function PhysFreeFall (m1, m2, R) {
+	var g = 9.8;
+	var S = (g*Math.pow(t, 2))/2;
+	return S;
+}
+
+function PhysEkin (m, V) {
+	var Ek = (m*Math.pow(V, 2)/2);
+	return Ek;
+}
+
+function PhysEpot (m, h) {
+	var g = 9.8;
+	var Ep = m*g*h;
+	return Ep;
+}
+
+function PhysStickLengthFindF1 (l1, F2, l2) { //F1*l1=F2*l2
+	var F1 = (F2*l2)/l1;
+	return F1;
+}
+
+function PhysStickLengthFindF2 (F1, l1,  l2) { //F1*l1=F2*l2
+	var F2 = (F1*l1)/l2;
+	return F2;
+}
+
+function PhysStickLengthFindl1 (F1, F2, l2) { //F1*l1=F2*l2
+	var l1 = (F2*l2)/F1;
+	return l1;
+}
+
+function PhysStickLengthFindl2 (F1, l1, F2) { //F1*l1=F2*l2
+	var l2 = (F1*l1)/F2;
+	return l2;
+}
+
+function PhysKPD (Ap, Az) {
+	var KPD = (Ap/Az)*100;
+	return KPD;
+}
+
+function PhysLawPaskal (Ap, Az, type) {
+	var ro = 1000;
+
+	if(type == water){
+		ro = 1000;
+	}
+
+	if(type == benzin){
+		ro = 710;
+	}
+
+	if(type == spirt){
+		ro = 800;
+	}
+
+	if(type == kerosin){
+		ro = 800;
+	}
+
+	if(type == caroil){
+		ro = 900;
+	}
+
+	if(type == milkcell){
+		ro = 1030;
+	}
+
+	if(type == watermors){
+		ro = 1030;
+	}
+
+	if(type == rtut){
+		ro = 13600;
+	}
+
+	if(type == woodsosn){
+		ro = 400;
+	}
+
+	if(type == parafin){
+		ro = 900;
+	}
+
+	if(type == alum){
+		ro = 2700;
+	}
+
+	if(type == mramor){
+		ro = 2700;
+	}
+
+	if(type == zink){
+		ro = 7100;
+	}
+
+	if(type == stail){
+		ro = 7800;
+	}
+
+	if(type == cuprum){
+		ro = 8900;
+	}
+
+	if(type == svin){
+		ro = 11350;
+	}
+	var g = 9.8;
+
+	var p = ro*g*h;
+	return p;
+}
+
+function PhysLawArhimeda (Vpog, type) {
+	var ro = 1000;
+
+	if(type == water){
+		ro = 1000;
+	}
+
+	if(type == benzin){
+		ro = 710;
+	}
+
+	if(type == spirt){
+		ro = 800;
+	}
+
+	if(type == kerosin){
+		ro = 800;
+	}
+
+	if(type == caroil){
+		ro = 900;
+	}
+
+	if(type == milkcell){
+		ro = 1030;
+	}
+
+	if(type == watermors){
+		ro = 1030;
+	}
+
+	if(type == rtut){
+		ro = 13600;
+	}
+
+	if(type == woodsosn){
+		ro = 400;
+	}
+
+	if(type == parafin){
+		ro = 900;
+	}
+
+	if(type == alum){
+		ro = 2700;
+	}
+
+	if(type == mramor){
+		ro = 2700;
+	}
+
+	if(type == zink){
+		ro = 7100;
+	}
+
+	if(type == stail){
+		ro = 7800;
+	}
+
+	if(type == cuprum){
+		ro = 8900;
+	}
+
+	if(type == svin){
+		ro = 11350;
+	}
+	var g = 9.8;
+
+	var Fa = ro*g*Vpog;
+	return Fa;
 }
