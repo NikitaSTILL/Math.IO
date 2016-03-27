@@ -313,3 +313,35 @@ function PhysLawArhimeda (Vpog, type) {
 	var Fa = ro*g*Vpog;
 	return Fa;
 }
+
+function faktorial (n) { //3
+	if (n != null) {
+	function factor(n) {
+		var x = 1;
+		var i = 2;
+
+		while(i <= n) {
+		x = x * i;
+		i++;
+		}
+
+		return x;
+	}
+
+	if (n < 0) {
+		while (n < 0){
+		n = prompt("Введите число больше либо равно нулю для вычисления факториала n!, где n >= 0. Факториала отрицательного числа не существует.", 0);
+		}
+
+		//document.write(factor(n));
+		return factor(n);
+	}
+
+	else {
+		//alert("0");//document.write(factor(n));
+		return factor(n);
+	}
+
+	} 
+	
+}
