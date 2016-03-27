@@ -105,6 +105,164 @@ Finding a sector area with π = 3,14
 Finding a sector area with π = 3,141592653589793238462643383279
 > SSectorMax (R, n)
 
+The strength of gravity
+> PhysFInWorld (m1, m2, R)
+
+The power of the free-fall
+> PhysFreeFall (m1, m2, R)
+
+Finding Kiniticheskoy energy
+> PhysEkin (m, V)
+
+Finding potential energy
+> PhysEpot (m, h)
+
+Finding the Force that acts on the shoulder l1
+> PhysStickLengthFindF1 (l1, F2, l2)
+
+Finding the Force that acts on the shoulder l2
+> PhysStickLengthFindF2 (F1, l1, l2)
+
+Finding long shoulder l1
+> PhysStickLengthFindl1 (F1, F2, l2)
+
+Finding long arm l2
+> PhysStickLengthFindl2 (F1, l1, F2)
+
+Finding efficiency
+> PhysKPD (Ap, Az)
+
+Finding the pressure vessel
+> PhysLawPaskal (Ap, Az, type)
+
+type:
+water
+ro = 1000;
+
+benzin
+ro = 710;
+
+
+spirt
+ro = 800;
+
+kerosin
+ro = 800;
+
+
+caroil
+ro = 900;
+
+
+milkcell
+ ro = 1030;
+
+
+watermors
+ro = 1030;
+
+
+rtut
+ro = 13600;
+
+
+woodsosn
+ro = 400;
+
+
+parafin
+ro = 900;
+
+
+alum
+ro = 2700;
+
+
+mramor
+ro = 2700;
+
+
+zink
+ro = 7,100;
+
+
+stail
+ro = 7,800;
+
+
+cuprum
+ro = 8,900;
+
+
+svin
+ro = 11350;
+
+
+Finding buoyancy
+> PhysLawArhimeda (Vpog, type)
+
+type:
+water
+ro = 1000;
+
+benzin
+ro = 710;
+
+
+spirt
+ro = 800;
+
+kerosin
+ro = 800;
+
+
+caroil
+ro = 900;
+
+
+milkcell
+ ro = 1030;
+
+
+watermors
+ro = 1030;
+
+
+rtut
+ro = 13600;
+
+
+woodsosn
+ro = 400;
+
+
+parafin
+ro = 900;
+
+
+alum
+ro = 2700;
+
+
+mramor
+ro = 2700;
+
+
+zink
+ro = 7,100;
+
+
+stail
+ro = 7,800;
+
+
+cuprum
+ro = 8,900;
+
+
+svin
+ro = 11350;
+
 # Функции
 
 Расчёт дискриминанта
