@@ -23,6 +23,7 @@ No use BIG formula in your code, use Math.IO
 8. Finding a circular arc at different π
 9. Finding the area of a circle with different π
 10. Finding the area of the sector at different π
+11. Multiple physical formulas on which you can find everything to variable
 
 # Что умеет
 1. Вычислять дискриминант
@@ -35,6 +36,7 @@ No use BIG formula in your code, use Math.IO
 8. Находить дугу окружности при разных π
 9. Находить площадь круга при разных π
 10. Находить площадь сектора при разных π
+11. Множество физических формул по которым можно найти всё до переменной
 
 # Functions
 The calculation of the discriminant
@@ -170,3 +172,161 @@ Finding a sector area with π = 3,141592653589793238462643383279
 
 Нахождение площади сектора при π= 3,141592653589793238462643383279
 > SSectorMax (R, n)
+
+Сила всемирного тяготения
+> PhysFInWorld (m1, m2, R)
+
+Сила свободного падения
+> PhysFreeFall (m1, m2, R)
+
+Нахождение Кинитической энергии
+> PhysEkin (m, V)
+
+Нахождение потенциальной энергии
+> PhysEpot (m, h)
+
+Нахождение Силы которая действует на плечо l1
+> PhysStickLengthFindF1 (l1, F2, l2)
+
+Нахождение Силы которая действует на плечо l2
+> PhysStickLengthFindF2 (F1, l1,  l2)
+
+Нахождение длинны плеча l1
+> PhysStickLengthFindl1 (F1, F2, l2)
+
+Нахождение длинны плеча l2
+> PhysStickLengthFindl2 (F1, l1, F2)
+
+Нахождение коэффициента полезного действия
+> PhysKPD (Ap, Az)
+
+Нахождение давления на сосуд
+> PhysLawPaskal (Ap, Az, type)
+
+type:
+water
+	  ro = 1000;
+	
+benzin
+	  ro = 710;
+
+
+spirt
+	  ro = 800;
+
+kerosin
+	  ro = 800;
+
+
+caroil
+		ro = 900;
+
+
+milkcell
+ 	  ro = 1030;
+
+
+watermors
+		ro = 1030;
+
+
+rtut
+		ro = 13600;
+
+
+woodsosn
+		ro = 400;
+
+
+parafin
+		ro = 900;
+
+
+alum
+		ro = 2700;
+
+
+mramor
+		ro = 2700;
+
+
+zink
+		ro = 7100;
+
+
+stail
+		ro = 7800;
+
+
+cuprum
+		ro = 8900;
+
+
+svin
+		ro = 11350;
+
+
+Нахождение выталкивающей силы
+> PhysLawArhimeda (Vpog, type)
+
+type:
+water
+	  ro = 1000;
+	
+benzin
+	  ro = 710;
+
+
+spirt
+	  ro = 800;
+
+kerosin
+	  ro = 800;
+
+
+caroil
+		ro = 900;
+
+
+milkcell
+ 	  ro = 1030;
+
+
+watermors
+		ro = 1030;
+
+
+rtut
+		ro = 13600;
+
+
+woodsosn
+		ro = 400;
+
+
+parafin
+		ro = 900;
+
+
+alum
+		ro = 2700;
+
+
+mramor
+		ro = 2700;
+
+
+zink
+		ro = 7100;
+
+
+stail
+		ro = 7800;
+
+
+cuprum
+		ro = 8900;
+
+
+svin
+		ro = 11350;
