@@ -38,7 +38,7 @@ No use BIG formula in your code, use Math.IO
 9. Находить площадь круга при разных π
 10. Находить площадь сектора при разных π
 11. Множество физических формул по которым можно найти всё до переменной
-12. Нахождение факториала
+12. Нахождение факториала 
 
  [Documentaion EN](https://github.com/NikitaSTILL/Math.IO/wiki/Documentation-EN)
  [Документация RU](https://github.com/NikitaSTILL/Math.IO/wiki/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F-RU)
