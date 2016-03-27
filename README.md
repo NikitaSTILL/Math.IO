@@ -24,6 +24,7 @@ No use BIG formula in your code, use Math.IO
 9. Finding the area of a circle with different π
 10. Finding the area of the sector at different π
 11. Multiple physical formulas on which you can find everything to variable
+12. Finding the factorial
 
 # Что умеет
 1. Вычислять дискриминант
@@ -37,6 +38,7 @@ No use BIG formula in your code, use Math.IO
 9. Находить площадь круга при разных π
 10. Находить площадь сектора при разных π
 11. Множество физических формул по которым можно найти всё до переменной
+12. Нахождение факториала
 
 # Functions
 The calculation of the discriminant
@@ -263,6 +265,9 @@ ro = 8,900;
 svin
 ro = 11350;
 
+Finding the factorial
+> Faktorial (n)
+
 # Функции
 
 Расчёт дискриминанта
@@ -488,3 +493,6 @@ cuprum
 
 svin
 		ro = 11350;
+		
+Нахождение факториала числа
+> faktorial (n)
