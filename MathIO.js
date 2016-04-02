@@ -7,7 +7,7 @@ function Discr (a, b, c) {
 }
 //Теорема Пифагора
 function findСAtteorPifag (a, b) {
-	var c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+	var c = Math.sqrt(Math.pow(a, 2) - Math.pow(b, 2));
 	return c;
 }
 
@@ -17,7 +17,7 @@ function findAAtteorPifag (b, c) {
 }
 
 function findBAtteorPifag (a, c) {
-	var b = Math.sqrt(Math.pow(c, 2) + Math.pow(a, 2));
+	var b = Math.sqrt(Math.pow(c, 2) - Math.pow(a, 2));
 	return b;
 }
 //Теорема Косинусов
@@ -314,7 +314,7 @@ function PhysLawArhimeda (Vpog, type) {
 	return Fa;
 }
 
-function faktorial (n) { //3
+function faktorial (n) { 
 	if (n != null) {
 	function factor(n) {
 		var x = 1;
@@ -344,4 +344,23 @@ function faktorial (n) { //3
 
 	} 
 	
+}
+
+function VectSumm2D (ax, bx, ay, by) {
+	var mass1 = [ax,ay];
+	var mass2 = [bx,by];
+	var c = [0,0];
+	c[0] = mass1[0] + mass2[0];
+	c[1] = mass1[1] + mass2[1];
+	return c;
+}
+
+function VectSumm3D (ax, bx, ay, by, az, bz) {
+	var mass1 = [ax,ay,az];
+	var mass2 = [bx,by,bz];
+	var c = [0,0,0];
+	c[0] = mass1[0] + mass2[0];
+	c[1] = mass1[1] + mass2[1];
+	c[2] = mass1[2] + mass2[2];
+	return c;
 }
