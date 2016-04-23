@@ -25,6 +25,7 @@ No use BIG formula in your code, use Math.IO
 10. Finding the area of the sector at different π
 11. Multiple physical formulas on which you can find everything to variable
 12. Finding the factorial
+13. All operations on vectors
 
 # Что умеет
 1. Вычислять дискриминант
@@ -39,6 +40,7 @@ No use BIG formula in your code, use Math.IO
 10. Находить площадь сектора при разных π
 11. Множество физических формул по которым можно найти всё до переменной
 12. Нахождение факториала 
+13. Все операции над векторами
 
  [Documentaion EN](https://github.com/NikitaSTILL/Math.IO/wiki/Documentation-EN)
  [Документация RU](https://github.com/NikitaSTILL/Math.IO/wiki/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D1%86%D0%B8%D1%8F-RU)
