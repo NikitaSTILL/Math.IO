@@ -364,3 +364,83 @@ function VectSumm3D (ax, bx, ay, by, az, bz) {
 	c[2] = mass1[2] + mass2[2];
 	return c;
 }
+
+function VectDiffer2D (ax, bx, ay, by) {
+	var mass1 = [ax,ay];
+	var mass2 = [bx,by];
+	var c = [0,0];
+	c[0] = mass1[0] - mass2[0];
+	c[1] = mass1[1] - mass2[1];
+	return c;
+}
+
+function VectDiffer3D (ax, bx, ay, by, az, bz) {
+	var mass1 = [ax,ay,az];
+	var mass2 = [bx,by,bz];
+	var c = [0,0,0];
+	c[0] = mass1[0] - mass2[0];
+	c[1] = mass1[1] - mass2[1];
+	c[2] = mass1[2] - mass2[2];
+	return c;
+}
+
+function VectMultiplScal2D (ax, ay, count) {
+	var mass1 = [ax,ay];
+	
+	var c = [0,0];
+	c[0] = mass1[0] * count;
+	c[1] = mass1[1] * count;
+	return c;
+}
+
+function VectMultiplScal3D (ax, ay, az, count) {
+	var mass1 = [ax,ay,az];
+	
+	var c = [0,0,0];
+	c[0] = mass1[0] * count;
+	c[1] = mass1[1] * count;
+	c[2] = mass1[2] * count;
+	return c;
+}
+
+function VectLength2D (ax, ay, count) {
+	var a = 0;
+	
+	var c = 0;
+	c = Math.sqrt(Math.pow(ax,2) + Math.pow(ay,2));
+	return c;
+}
+
+function VectLength3D (ax, ay, az, count) {
+	var a = 0;
+	
+	var c = 0;
+	c = Math.sqrt(Math.pow(ax,2) + Math.pow(ay,2) + Math.pow(az,2));
+	return c;
+}
+
+function VectMultipl2D (ax, bx, ay, by) {
+	var mass1 = [ax,ay];
+	var mass2 = [bx,by];
+	var summ = [0,0];
+
+	var c = 0;
+	summ[0] = mass1[0] * mass2[0];
+	summ[1] = mass1[1] * mass2[1];
+	c = summ[0] + summ[1];
+	return c;
+}
+
+function VectMultipl3D (ax, ay, az, count) {
+	var mass1 = [ax,ay];
+	var mass2 = [bx,by];
+	var mass2 = [cx,cy];
+	var summ = [0,0,0];
+
+	var c = 0;
+	summ[0] = mass1[0] * mass2[0];
+	summ[1] = mass1[1] * mass2[1];
+	summ[2] = mass3[2] * mass3[2];
+	c = summ[0] + summ[1] + summ[2];
+	return c;
+}
