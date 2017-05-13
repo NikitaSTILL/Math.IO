@@ -1,176 +1,30 @@
-/*МАТЕМАТИКА*/
+/*Константы*/
 
-//Дискриминант
-function Discr (a, b, c) {
-	var D = Math.pow(b,2)-4*a*c;
-	return D;
-}
-//Теорема Пифагора
-function findСAtteorPifag (a, b) {
-	var c = Math.sqrt(Math.pow(a, 2) - Math.pow(b, 2));
-	return c;
-}
+var G = 0.0000000000667;
+var PHYSg = 9.8;
 
-function findAAtteorPifag (b, c) {
-	var a = Math.sqrt(Math.pow(c, 2) + Math.pow(b, 2));
-	return a;
-}
-
-function findBAtteorPifag (a, c) {
-	var b = Math.sqrt(Math.pow(c, 2) - Math.pow(a, 2));
-	return b;
-}
-//Теорема Косинусов
-function TeorCOS (b, c, alpha) {
-	var a = Math.sqrt( Math.pow(b, 2) + Math.pow(c, 2) - 2*b*c*Math.cos(alpha));
-	return a;
-}
-//Теорема синусов
-function TeorSINfindA (b, alpha, beta) {
-	var a = (b * Math.sin(alpha))/ Math.sin(beta);
-	return a;
+var ro = {
+	'water' : 1000,
+	'benzin' : 710,
+	'spirt' : 800,
+	'kerosin' : 800,
+	'caroil' : 900,
+	'milkcell' : 1030,
+	'watermors' : 1030,
+	'rtut' : 13600,
+	'woodsosn' : 400,
+	'parafin' : 900,
+	'alum' : 2700,
+	'mramor' : 2700,
+	'zink' : 7100,
+	'stail' : 7800,
+	'cuprum' : 8900,
+	'svin' : 11350
 }
 
-function TeorSINfindB (a, alpha, beta) {
-	var a = (a * Math.sin(beta))/ Math.sin(alpha);
-	return a;
-}
+/*----------*/
 
-function TeorSINfindSINalpha (a, b, beta) {
-	var alpha = (a * Math.sin(beta))/ b;
-	return alpha;
-}
-
-function TeorSINfindSINbeta (a, b, alpha) {
-	var beta = (b * Math.sin(alpha))/ a;
-	return beta;
-}
-//Площадь треугольника
-function StreAtStor (a, b, gamma) {
-	var S = 0.5*a*b*Math.sin(gamma);
-	return S;
-}
-
-function StreAtGeron (a, b, c) {
-	var p = (a + b + c)/2;
-	var S = Math.sqrt(p*(p-a)*(p-b)*(p-c));
-	return S;
-}
-
-function StreAtRadius (a, b, c, R) {
-	var S = (a*b*c)/(4*R);
-	return S;
-}
-//Радиус вписаной и описаной окр.
-function RadiusOUT (a, n) {
-	var R = a / (2*Math.sin(180/n));
-	return R;
-}
-
-function RadiusIN (a, n) {
-	var R = a / (2*Math.tan(180/n));
-	return R;
-}
-//Окружности
-function DlinOkrMin (R) {
-	var pi = 3.14;
-	var C = 2*pi*R;
-	return C;
-}
-
-function DlinOkrMax (R) {
-	var pi = 3.141592653589793238462643383279;
-	var C = 2*pi*R;
-	return C;
-}
-
-function DlinDugMin (R, n) {
-	var pi = 3.14;
-	var l = (pi*R*n)/180;
-	return l;
-}
-
-function DlinDugMax (R, n) {
-	var pi = 3.141592653589793238462643383279;
-	var l = (pi*R*n)/180;
-	return l;
-}
-
-function SCrugMin (R, n) {
-	var pi = 3.14;
-	var S = pi*Math.pow(R, 2);
-	return S;
-}
-
-function SCrugMax (R, n) {
-	var pi = 3.141592653589793238462643383279;
-	var S = pi*Math.pow(R, 2);
-	return S;
-}
-
-function SSectorMin (R, n) {
-	var pi = 3.14;
-	var S = (pi*Math.pow(S, 2)*n)/360;
-	return S;
-}
-
-function SSectorMax (R, n) {
-	var pi = 3.141592653589793238462643383279;
-	var S = (pi*Math.pow(S, 2)*n)/360;
-	return S;
-}
-
-/*ФИЗИКА*/
-
-function PhysFInWorld (m1, m2, R) {
-	var G = 0.0000000000667;
-	var F = G*((m1*m2)/Math.pow(R, 2));
-	return F;
-}
-
-function PhysFreeFall (m1, m2, R) {
-	var g = 9.8;
-	var S = (g*Math.pow(t, 2))/2;
-	return S;
-}
-
-function PhysEkin (m, V) {
-	var Ek = (m*Math.pow(V, 2)/2);
-	return Ek;
-}
-
-function PhysEpot (m, h) {
-	var g = 9.8;
-	var Ep = m*g*h;
-	return Ep;
-}
-
-function PhysStickLengthFindF1 (l1, F2, l2) { //F1*l1=F2*l2
-	var F1 = (F2*l2)/l1;
-	return F1;
-}
-
-function PhysStickLengthFindF2 (F1, l1,  l2) { //F1*l1=F2*l2
-	var F2 = (F1*l1)/l2;
-	return F2;
-}
-
-function PhysStickLengthFindl1 (F1, F2, l2) { //F1*l1=F2*l2
-	var l1 = (F2*l2)/F1;
-	return l1;
-}
-
-function PhysStickLengthFindl2 (F1, l1, F2) { //F1*l1=F2*l2
-	var l2 = (F1*l1)/F2;
-	return l2;
-}
-
-function PhysKPD (Ap, Az) {
-	var KPD = (Ap/Az)*100;
-	return KPD;
-}
-
-function PhysLawPaskal (Ap, Az, type) {
+function RoEdit(type) {
 	var ro = 1000;
 
 	if(type == water){
@@ -236,211 +90,244 @@ function PhysLawPaskal (Ap, Az, type) {
 	if(type == svin){
 		ro = 11350;
 	}
-	var g = 9.8;
-
-	var p = ro*g*h;
-	return p;
+	return ro;
 }
 
-function PhysLawArhimeda (Vpog, type) {
-	var ro = 1000;
+var MIO = {
+	'M' : {
+		'Di' : function (a, b, c) {
+			return Math.pow(b,2)-4*a*c;
+		},
 
-	if(type == water){
-		ro = 1000;
-	}
+		'teoPif' : {
+			'fA' : function (b, c) {
+				return Math.sqrt(Math.pow(c, 2) - Math.pow(b, 2));
+			},
+			'fB' : function (a, c) {
+				return Math.sqrt(Math.pow(c, 2) - Math.pow(a, 2));
+			},
+			'fC' : function (a, b) {
+				return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+			}
+		},
 
-	if(type == benzin){
-		ro = 710;
-	}
+		'tCos' : function (b, c, alpha) {
+			return Math.sqrt( Math.pow(b, 2) + Math.pow(c, 2) - 2*b*c*Math.cos(alpha));
+		},
 
-	if(type == spirt){
-		ro = 800;
-	}
+		'tSin' : {
+			'fA' : function (b, alpha, beta) {
+				return (b * Math.sin(alpha))/ Math.sin(beta);
+			},
+			'fB' : function (a, alpha, beta) {
+				return (a * Math.sin(beta))/ Math.sin(alpha);
+			},
+			'fAlpha' : function (a, b, beta) {
+				return (a * Math.sin(beta))/ Math.sin(alpha);
+			},
+			'fBeta' : function (a, b, alpha) {
+				return (b * Math.sin(alpha))/ a;
+			}
+		},
 
-	if(type == kerosin){
-		ro = 800;
-	}
+		'STri' : {
+			'TwSt' : function (a, b, gamma) {
+				return 0.5*a*b*Math.sin(gamma);
+			},
+			'Geron' : function (a, b, c) {
+				var p = (a + b + c)/2;
+				return Math.sqrt(p*(p-a)*(p-b)*(p-c));
+			},
+			'Rad' : function (a, b, c, R) {
+				return (a*b*c)/(4*R);
+			}
+		},
+		//Math.PI
+		'DlinCir' : function () {
+			return 2*Math.PI*R;
+		},
 
-	if(type == caroil){
-		ro = 900;
-	}
+		'DlinDug' : function () {
+			return (Math.PI*R*n)/180;
+		},
 
-	if(type == milkcell){
-		ro = 1030;
-	}
+		'S' : {
+			'Crug' : function (R, n) {
+				return Math.PI*Math.pow(R, 2);
+			},
+			'Sect' : function (R, n) {
+				return (Math.PI*Math.pow(S, 2)*n)/360;
+			}
+		},
 
-	if(type == watermors){
-		ro = 1030;
-	}
+		'Fact' : function (n) {
+			if (n != null) {
+				function factor(n) {
+					var x = 1;
+					var i = 2;
 
-	if(type == rtut){
-		ro = 13600;
-	}
+					while(i <= n) {
+					x = x * i;
+					i++;
+					}
 
-	if(type == woodsosn){
-		ro = 400;
-	}
+					return x;
+				}
 
-	if(type == parafin){
-		ro = 900;
-	}
+				if (n < 0) {
+					while (n < 0){
+					n = prompt("Введите число больше либо равно нулю для вычисления факториала n!, где n >= 0. Факториала отрицательного числа не существует.", 0);
+					}
 
-	if(type == alum){
-		ro = 2700;
-	}
+					//document.write(factor(n));
+					return factor(n);
+				}
 
-	if(type == mramor){
-		ro = 2700;
-	}
+				else {
+					//alert("0");//document.write(factor(n));
+					return factor(n);
+				}
 
-	if(type == zink){
-		ro = 7100;
-	}
+			} 
+		},
 
-	if(type == stail){
-		ro = 7800;
-	}
+		'Vect' : {
+			'Summ' : {
+				'2D' : function (ax, bx, ay, by) {
+					var mass1 = [ax,ay];
+					var mass2 = [bx,by];
+					var c = [0,0];
+					c[0] = mass1[0] + mass2[0];
+					c[1] = mass1[1] + mass2[1];
+					return c;
+				},
+				'3D' : function (ax, bx, ay, by, az, bz) {
+					var mass1 = [ax,ay,az];
+					var mass2 = [bx,by,bz];
+					var c = [0,0,0];
+					c[0] = mass1[0] + mass2[0];
+					c[1] = mass1[1] + mass2[1];
+					c[2] = mass1[2] + mass2[2];
+					return c;
+				}
+			},
 
-	if(type == cuprum){
-		ro = 8900;
-	}
+			'Diff' : {
+				'2D' : function (ax, bx, ay, by) {
+					var mass1 = [ax,ay];
+					var mass2 = [bx,by];
+					var c = [0,0];
+					c[0] = mass1[0] - mass2[0];
+					c[1] = mass1[1] - mass2[1];
+					return c;
+				},
+				'3D' : function (ax, bx, ay, by, az, bz) {
+					var mass1 = [ax,ay,az];
+					var mass2 = [bx,by,bz];
+					var c = [0,0,0];
+					c[0] = mass1[0] - mass2[0];
+					c[1] = mass1[1] - mass2[1];
+					c[2] = mass1[2] - mass2[2];
+					return c;
+				}
+			},
 
-	if(type == svin){
-		ro = 11350;
-	}
-	var g = 9.8;
+			'Scal' : {
+				'2D' : function (ax, ay, count) {
+					var mass1 = [ax,ay];
+					var c = [0,0];
+					c[0] = mass1[0] * count;
+					c[1] = mass1[1] * count;
+					return c;
+				},
+				'3D' : function (ax, ay, az, count) {
+					var mass1 = [ax,ay,az];
+					var c = [0,0,0];
+					c[0] = mass1[0] * count;
+					c[1] = mass1[1] * count;
+					c[2] = mass1[2] * count;
+					return c;
+				}
+			},
 
-	var Fa = ro*g*Vpog;
-	return Fa;
-}
+			'Len' : {
+				'2D' : function (ax, ay, count) {
+					var a = 0;
+					var c = 0;
+					c = Math.sqrt(Math.pow(ax,2) + Math.pow(ay,2));
+					return c;
+				},
+				'3D' : function (ax, ay, az, count) {
+					var a = 0;
+					var c = 0;
+					c = Math.sqrt(Math.pow(ax,2) + Math.pow(ay,2) + Math.pow(az,2));
+					return c;
+				}
+			},
 
-function faktorial (n) { 
-	if (n != null) {
-	function factor(n) {
-		var x = 1;
-		var i = 2;
-
-		while(i <= n) {
-		x = x * i;
-		i++;
+			'Mult' : {
+				'2D' : function (ax, bx, ay, by) {
+					var mass1 = [ax,ay];
+					var mass2 = [bx,by];
+					var summ = [0,0];
+					var c = 0;
+					summ[0] = mass1[0] * mass2[0];
+					summ[1] = mass1[1] * mass2[1];
+					c = summ[0] + summ[1];
+					return c;
+				},
+				'3D' : function (ax, ay, bx, by, cx, cy) {
+					var mass1 = [ax,ay];
+					var mass2 = [bx,by];
+					var mass2 = [cx,cy];
+					var summ = [0,0,0];
+					var c = 0;
+					summ[0] = mass1[0] * mass2[0];
+					summ[1] = mass1[1] * mass2[1];
+					summ[2] = mass3[2] * mass3[2];
+					c = summ[0] + summ[1] + summ[2];
+					return c;
+				}
+			}
 		}
+	},
 
-		return x;
-	}
+	'Ph' : {
+		'InWor' : function (m1, m2, R) {
+			return G*((m1*m2)/Math.pow(R, 2));
+		},
 
-	if (n < 0) {
-		while (n < 0){
-		n = prompt("Введите число больше либо равно нулю для вычисления факториала n!, где n >= 0. Факториала отрицательного числа не существует.", 0);
+		'FreeFall' : function (m1, m2, R) {
+			return (PHYSg*Math.pow(t, 2))/2;
+		},
+
+		'Ekin' : function (m, V) {
+			return (m*Math.pow(V, 2)/2);
+		},
+
+		'Epot' : function (m, h) {
+			return m*PHYSg*h;
+		},
+
+		'StLen' : {
+			'Ff1' : function () {return (F2*l2)/l1;},
+			'Ff2' : function () {return (F1*l1)/l2;},
+			'Fl1' : function () {return (F2*l2)/F1;},
+			'Fl2' : function () {return (F1*l1)/F2;}
+		},
+
+		'KPD' : function (Ap, Az) {
+			return (Ap/Az)*100;
+		},
+
+		'LawPas' : function (h, type) {
+
+			return RoEdit(type)*PHYSg*h;
+		},
+
+		'LawArh' : function (Vpog, type) {
+			return RoEdit(type)*PHYSg*Vpog;
 		}
-
-		//document.write(factor(n));
-		return factor(n);
 	}
-
-	else {
-		//alert("0");//document.write(factor(n));
-		return factor(n);
-	}
-
-	} 
 	
-}
-
-function VectSumm2D (ax, bx, ay, by) {
-	var mass1 = [ax,ay];
-	var mass2 = [bx,by];
-	var c = [0,0];
-	c[0] = mass1[0] + mass2[0];
-	c[1] = mass1[1] + mass2[1];
-	return c;
-}
-
-function VectSumm3D (ax, bx, ay, by, az, bz) {
-	var mass1 = [ax,ay,az];
-	var mass2 = [bx,by,bz];
-	var c = [0,0,0];
-	c[0] = mass1[0] + mass2[0];
-	c[1] = mass1[1] + mass2[1];
-	c[2] = mass1[2] + mass2[2];
-	return c;
-}
-
-function VectDiffer2D (ax, bx, ay, by) {
-	var mass1 = [ax,ay];
-	var mass2 = [bx,by];
-	var c = [0,0];
-	c[0] = mass1[0] - mass2[0];
-	c[1] = mass1[1] - mass2[1];
-	return c;
-}
-
-function VectDiffer3D (ax, bx, ay, by, az, bz) {
-	var mass1 = [ax,ay,az];
-	var mass2 = [bx,by,bz];
-	var c = [0,0,0];
-	c[0] = mass1[0] - mass2[0];
-	c[1] = mass1[1] - mass2[1];
-	c[2] = mass1[2] - mass2[2];
-	return c;
-}
-
-function VectMultiplScal2D (ax, ay, count) {
-	var mass1 = [ax,ay];
-	
-	var c = [0,0];
-	c[0] = mass1[0] * count;
-	c[1] = mass1[1] * count;
-	return c;
-}
-
-function VectMultiplScal3D (ax, ay, az, count) {
-	var mass1 = [ax,ay,az];
-	
-	var c = [0,0,0];
-	c[0] = mass1[0] * count;
-	c[1] = mass1[1] * count;
-	c[2] = mass1[2] * count;
-	return c;
-}
-
-function VectLength2D (ax, ay, count) {
-	var a = 0;
-	
-	var c = 0;
-	c = Math.sqrt(Math.pow(ax,2) + Math.pow(ay,2));
-	return c;
-}
-
-function VectLength3D (ax, ay, az, count) {
-	var a = 0;
-	
-	var c = 0;
-	c = Math.sqrt(Math.pow(ax,2) + Math.pow(ay,2) + Math.pow(az,2));
-	return c;
-}
-
-function VectMultipl2D (ax, bx, ay, by) {
-	var mass1 = [ax,ay];
-	var mass2 = [bx,by];
-	var summ = [0,0];
-
-	var c = 0;
-	summ[0] = mass1[0] * mass2[0];
-	summ[1] = mass1[1] * mass2[1];
-	c = summ[0] + summ[1];
-	return c;
-}
-
-function VectMultipl3D (ax, ay, az, count) {
-	var mass1 = [ax,ay];
-	var mass2 = [bx,by];
-	var mass2 = [cx,cy];
-	var summ = [0,0,0];
-
-	var c = 0;
-	summ[0] = mass1[0] * mass2[0];
-	summ[1] = mass1[1] * mass2[1];
-	summ[2] = mass3[2] * mass3[2];
-	c = summ[0] + summ[1] + summ[2];
-	return c;
 }
