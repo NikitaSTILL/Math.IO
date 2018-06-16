@@ -1,9 +1,9 @@
-/*Константы*/
+/* Константы */
 
-var G = 0.0000000000667;
-var PHYSg = 9.8;
+const G = 0.0000000000667;
+const PHYSg = 9.8;
 
-var ro = {
+const ro = {
 	'water' : 1000,
 	'benzin' : 710,
 	'spirt' : 800,
@@ -22,75 +22,10 @@ var ro = {
 	'svin' : 11350
 }
 
-/*----------*/
+/* Начинаем */
 
 function RoEdit(type) {
-	var ro = 1000;
-
-	if(type == water){
-		ro = 1000;
-	}
-
-	if(type == benzin){
-		ro = 710;
-	}
-
-	if(type == spirt){
-		ro = 800;
-	}
-
-	if(type == kerosin){
-		ro = 800;
-	}
-
-	if(type == caroil){
-		ro = 900;
-	}
-
-	if(type == milkcell){
-		ro = 1030;
-	}
-
-	if(type == watermors){
-		ro = 1030;
-	}
-
-	if(type == rtut){
-		ro = 13600;
-	}
-
-	if(type == woodsosn){
-		ro = 400;
-	}
-
-	if(type == parafin){
-		ro = 900;
-	}
-
-	if(type == alum){
-		ro = 2700;
-	}
-
-	if(type == mramor){
-		ro = 2700;
-	}
-
-	if(type == zink){
-		ro = 7100;
-	}
-
-	if(type == stail){
-		ro = 7800;
-	}
-
-	if(type == cuprum){
-		ro = 8900;
-	}
-
-	if(type == svin){
-		ro = 11350;
-	}
-	return ro;
+	return ro[type];
 }
 
 var MIO = {
@@ -99,35 +34,37 @@ var MIO = {
 			return Math.pow(b,2)-4*a*c;
 		},
 
-		'teoPif' : {
-			'fA' : function (b, c) {
-				return Math.sqrt(Math.pow(c, 2) - Math.pow(b, 2));
+		'teor' : {
+			'Pifagor' : {
+				'fA' : function (b, c) {
+					return Math.sqrt(Math.pow(c, 2) - Math.pow(b, 2));
+				},
+				'fB' : function (a, c) {
+					return Math.sqrt(Math.pow(c, 2) - Math.pow(a, 2));
+				},
+				'fC' : function (a, b) {
+					return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+				}
 			},
-			'fB' : function (a, c) {
-				return Math.sqrt(Math.pow(c, 2) - Math.pow(a, 2));
-			},
-			'fC' : function (a, b) {
-				return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
-			}
-		},
 
-		'tCos' : function (b, c, alpha) {
-			return Math.sqrt( Math.pow(b, 2) + Math.pow(c, 2) - 2*b*c*Math.cos(alpha));
-		},
-
-		'tSin' : {
-			'fA' : function (b, alpha, beta) {
-				return (b * Math.sin(alpha))/ Math.sin(beta);
+			'cos' : function (b, c, alpha) {
+				return Math.sqrt( Math.pow(b, 2) + Math.pow(c, 2) - 2*b*c*Math.cos(alpha));
 			},
-			'fB' : function (a, alpha, beta) {
-				return (a * Math.sin(beta))/ Math.sin(alpha);
+			
+			'sin' : {
+				'fA' : function (b, alpha, beta) {
+					return (b * Math.sin(alpha))/ Math.sin(beta);
+				},
+				'fB' : function (a, alpha, beta) {
+					return (a * Math.sin(beta))/ Math.sin(alpha);
+				},
+				'fAlpha' : function (a, b, beta) {
+					return (a * Math.sin(beta))/ Math.sin(alpha);
+				},
+				'fBeta' : function (a, b, alpha) {
+					return (b * Math.sin(alpha))/ a;
+				}
 			},
-			'fAlpha' : function (a, b, beta) {
-				return (a * Math.sin(beta))/ Math.sin(alpha);
-			},
-			'fBeta' : function (a, b, alpha) {
-				return (b * Math.sin(alpha))/ a;
-			}
 		},
 
 		'STri' : {
@@ -142,13 +79,15 @@ var MIO = {
 				return (a*b*c)/(4*R);
 			}
 		},
+		// TODO: длинны объединить через один вход
 		//Math.PI
-		'DlinCir' : function () {
-			return 2*Math.PI*R;
-		},
-
-		'DlinDug' : function () {
-			return (Math.PI*R*n)/180;
+		'Dlin' : {
+			'Cir' : function () {
+				return 2*Math.PI*R;
+			},
+			'Dug' : function () {
+				return (Math.PI*R*n)/180;
+			}
 		},
 
 		'S' : {
@@ -175,16 +114,12 @@ var MIO = {
 				}
 
 				if (n < 0) {
-					while (n < 0){
-					n = prompt("Введите число больше либо равно нулю для вычисления факториала n!, где n >= 0. Факториала отрицательного числа не существует.", 0);
-					}
+					console.log('Math.IO error: нельзя вычислить факториал, число меньше нуля');
 
-					//document.write(factor(n));
-					return factor(n);
+					//return factor(n);
 				}
 
 				else {
-					//alert("0");//document.write(factor(n));
 					return factor(n);
 				}
 
